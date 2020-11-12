@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alfa_slab_one</item>
+        <item>@font/baloo</item>
+        <item>@font/bungee</item>
+        <item>@font/fugaz_one</item>
+        <item>@font/muli_extrabold</item>
+        <item>@font/rammetto_one</item>
+        <item>@font/rubik_mono_one</item>
+        <item>@font/skranji_bold</item>
+        <item>@font/suez_one</item>
+        <item>@font/titan_one</item>
+        <item>@font/wendy_one</item>
+    </array>
+</resources>

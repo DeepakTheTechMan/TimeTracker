@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/event_card"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@android:color/darker_gray"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/event_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible"
+                    android:text="Hello"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/event_timer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp">
+
+                <com.example.timetracker.timerview.TimerView
+                    android:id="@+id/event_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:isTimeTextBold="true"
+                    app:suffixDay="Day"
+                    app:suffixDayRightMargin="4dp"
+                    app:suffixGravity="top"
+                    app:suffixHour="Hr"
+                    app:suffixHourRightMargin="4dp"
+                    app:suffixMinute="Min"
+                    app:suffixMinuteRightMargin="4dp"
+                    app:suffixSecond="Sec"
+                    app:suffixSecondRightMargin="4dp"
+                    app:suffixTextColor="@android:color/black"
+                    app:suffixTextSize="18sp"
+                    app:timeTextColor="@android:color/black"
+                    app:timeTextSize="24sp"
+                    app:isSuffixTextBold="true"/>
+
+                <TextView
+                    android:id="@+id/event_timer_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/event_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:textColor="@android:color/black"
+            tools:text="14/07"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="10dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--<LinearLayout
+        android:layout_width="336dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:background="@drawable/custom_swipe_bg_yellow">
+
+        <ImageView
+            android:id="@+id/slide_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_delete_sweep_white" />
+
+    </LinearLayout>-->
+
+    <com.github.vipulasri.timelineview.TimelineView
+        android:id="@+id/event_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:line="@color/black_light"
+        app:lineSize="0dp"
+        app:marker="@drawable/ic_ongoing"
+        app:markerSize="20dp"
+        android:layout_marginStart="10dp"/>
+
+
+</LinearLayout>

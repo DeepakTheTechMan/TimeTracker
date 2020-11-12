@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/colorPrimaryDark">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_baseline_arrow_back_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Upcoming Reminder"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:layout_marginStart="15dp"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <!--<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomingReminderRecycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomingReminderRecycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutAnimation="@anim/layout_fall_down"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <LinearLayout
+            android:id="@+id/layout_recycler_view_my_courses_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@drawable/ic_baseline_timer_off_24"
+                app:tint="@color/colorPrimaryDark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NO UPCOMING REMINDER"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:fontFamily="@font/skranji_bold"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You Have Not Set Any Reminder Yet!"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:fontFamily="@font/skranji_bold"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center|bottom">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminate="true"
+                android:indeterminateOnly="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOADING"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/skranji_bold"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>-->
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/white_minor_round_bk"
+    android:backgroundTint="#ffffff"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom Reminder"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:maxLength="2"
+        android:focusable="true"
+        android:hint="Input Duration"
+        android:textColorHint="@color/black"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/black"
+        android:layout_marginTop="2dp"/>
+
+    <Button
+        android:id="@+id/setReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/corner_10dp_solid"
+        android:layout_marginTop="10dp"
+        android:text="Set Reminder"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/skranji_bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+
+</LinearLayout>
